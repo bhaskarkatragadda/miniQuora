@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function check() {
+            if (document.getElementById('us').value == "") {
+                x = "enter username";
+                document.getElementById('abc').innerHTML = x;
+                document.getElementById('us').select();
+                return false;
+            } else if (document.getElementById('pass').value == "") {
+                x = "enter password";
+                document.getElementById('abc1').innerHTML = x;
+                document.getElementById('pass').select();
+                return false;
+            } else if (document.getElementById('pass2').value == "") {
+                x = "enter password";
+                document.getElementById('abc2').innerHTML = x;
+                document.getElementById('pass2').select();
+                return false;
+            } else if (document.getElementById('pass').value != document.getElementById('pass2').value) {
+                x = " check entered password";
+                document.getElementById('abc2').innerHTML = x;
+                document.getElementById('pass2').select();
+                return false;
+            } else if (document.getElementById('email1').value == "") {
+                x = "enter email";
+                document.getElementById('abc3').innerHTML = x;
+                document.getElementById('email1').select();
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background-image: url("/images/bg.png");
+
+        }
+
+        .container {
+            position: absolute;
+            top: 20%;
+            right: 35%;
+            height: 400px;
+            width: 35%;
+            border-radius: 20px;
+            background-color: white;
+            opacity: 1;
+            box-shadow: 0 5.9px 5.4px -54px rgba(0, 0, 0, 0.348),
+            0 16.3px 14.9px -54px rgba(0, 0, 0, 0.5),
+            0 39.2px 35.9px -54px rgba(0, 0, 0, 0.652),
+            0 130px 119px -54px rgba(0, 0, 0, 1);
+
+
+        }
+
+        #heading {
+            opacity: 1;
+            color: maroon;
+            text-align: center;
+        }
+
+        #form1 {
+
+            text-align: left;
+        }
+
+        .box1 {
+            position: absolute;
+            height: 200px;
+            width: 50%;
+            right: 15%;
+
+        }
+
+        #sub {
+            position: absolute;
+            right: 55%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">MiniQuora</h1>
+    <br>
+    <div class="box1">
+        <form id="form1" action="/" method="post">
+            <p>
+            <h3>Username</h3></p>
+            <input type="text" placeholder="username" id="us" name="name">
+            <p id="abc"></p>
+            <p>
+            <h3>Password</h3></p>
+            <input type="password" placeholder="password" id="pass" name="password">
+            <p id="abc1"></p>
+            <br>
+            <input type="submit" name="submit" value="Login" id="sub">
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

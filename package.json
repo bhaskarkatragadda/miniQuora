@@ -6,12 +6,20 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "chalk": "^3.0.0",
     "cookie-parser": "~1.4.4",
+    "dateformat": "^3.0.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.1",
+    "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
     "mongoose": "^5.8.11",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
