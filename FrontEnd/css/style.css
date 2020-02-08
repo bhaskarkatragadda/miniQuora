@@ -1,0 +1,22 @@
+*
+{
+	margin: 0 auto;
+	padding: 0;
+}
+.header
+{
+	height: 30px;
+	width: 950px;
+	background-color: #000;
+}
+.slider-wrapper
+{
+	background: red;
+	height: 350px;
+	width: 950px;
+}
+#slider img 
+{
+	height: 350px;
+	width: 950px;
+}

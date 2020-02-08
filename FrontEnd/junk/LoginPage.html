@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+	<script type="text/javascript">
+	function check()
+	{ 	
+		if(document.getElementById('us').value=="")
+		{
+			x="enter username";
+			document.getElementById('abc').innerHTML=x;
+			document.getElementById('us').select();
+			return false;
+		}
+		else if(document.getElementById('pass').value=="")
+		{
+			x="enter password";
+			document.getElementById('abc1').innerHTML=x;
+			document.getElementById('pass').select();
+			return false;
+		}
+		else if(document.getElementById('pass2').value=="")
+		{
+			x="enter password";
+			document.getElementById('abc2').innerHTML=x;
+			document.getElementById('pass2').select();
+			return false;
+		}
+		else if(document.getElementById('pass').value!=document.getElementById('pass2').value)
+		{
+			x=" check entered password";
+			document.getElementById('abc2').innerHTML=x;
+			document.getElementById('pass2').select();
+			return false;
+		}
+		else if(document.getElementById('email1').value=="")
+		{
+			x="enter email";
+			document.getElementById('abc3').innerHTML=x;
+			document.getElementById('email1').select();
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	</script>
+	<style type="text/css">
+	body
+	{
+		background-image: url("images/Instagram.jpg");
+	}
+#heading
+{
+	text-align: left;
+}
+
+
+h3
+{
+	text-align: center;
+	color: purple;
+
+
+}
+.col-md-6
+{
+	/*background-image: url("images/Green and Blue.jpg");*/
+
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="css/nivo-slider.css">
+<link rel="stylesheet" type="text/css" href="themes/default/default.css">
+
+</head>
+<body>
+<nav>
+<H3>Welcome to Project X</H3>
+</nav>
+<div class="container">
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+				<h1 id="heading">Sign Up</h1>
+				<form onsubmit="return check()">
+		<p>Username</p>
+		<input type="text" placeholder="username" id="us"><p id="abc"></p>	
+		<p>Password</p>
+		<input type="password" placeholder="password" id="pass"><p id="abc1"></p>
+		<p>Re-enter Password</p>
+		<input type="password" placeholder=" re-enter password" id="pass2"><p id="abc2"></p>
+		<p>Email</p>
+		<input type="email" placeholder="gmail" id="email1"><p id="abc3"></p>
+		<input type="submit" name="submit" value="Sign Up" >
+		</form>
+
+		</div>
+		<div class="col-md-6">
+				<h1 id="heading">Login</h1>
+				<form onsubmit="return check()">
+		<p>Username</p>
+		<input type="text" placeholder="username" id="us"><p id="abc"></p>	
+		<p>Password</p>
+		<input type="password" placeholder="password" id="pass"><p id="abc1"></p>
+		<input type="submit" name="submit" value="Login" >
+		</form>
+		</div>
+		</div>
+
+	</div>	
+
+</div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</html>
