@@ -6,13 +6,8 @@ const Question  =  require('../models/questionModel');
 /* GET home page. */
 router.get('/', async (req, res, next)=>{
     //to get all the questions
-   let  questions = await Question.find();
-
-
-
-    console.log(req.cookies._vt);
-
-   res.render('homepage', {});
+   let  questions = await Question.find().sort({createdAt: -1});
+   res.render('homepage', {questions: questions});
 });
 
 router.get('/questionSearch', function(req, res, next) {
@@ -21,7 +16,7 @@ router.get('/questionSearch', function(req, res, next) {
 
 router.post('/createQuestion', async function(req, res, next) {
     try{
-        const userId = '5e3e93ae7f92d02831a59908';
+        const userId = '5e3ec39f60ad34abfbdb2dac';
         let question = req.body.question;
         let tag = req.body.tag;
         const questions = new Question({

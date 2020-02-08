@@ -133,48 +133,31 @@
 <div class="container">
     <br>
     <div class="row">
-        <div class="col-md-3">
-            <br>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">1</a>
-                <a href="#" class="list-group-item list-group-item-action">2</a>
-                <a href="#" class="list-group-item list-group-item-action">3</a>
-                <a href="#" class="list-group-item list-group-item-action">4</a>
-            </div>
-        </div>
+        <div class="col-md-3"></div>
         <div class="col-md-6">
-
-            <% for(let i in questions){ %>
-                <div class="list-group">
-                    <a href="/details/<%= questions[i]._id %>"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1"><%= questions[i].question %></h5>
-                            <h6>#<%= questions[i].tag %></h6>
-                            <small><%= questions[i].createdAt %></small>
-                        </div>
-                    </a>
-                </div>
-            <% } %>
-
-        </div>
-        <div class="col-md-3">
-            <label for="Qbox">Enter Your Question:</label>
-
-            <textarea id="Qbox" rows="3" cols="41"></textarea>
-            <br>
-            <br>
-            <div class="form-group">
-                <label for="sel1">Select Tags:</label>
-                <select class="form-control" id="sel1" name="tag">
-                    <option value="stackoverflow">stackoverflow</option>
-                    <option value="google">google</option>
-                    <option value="shopay">shopay</option>
-                    <option value="bangalore">bangalore</option>
-                </select>
+            <div class="list-group">
+                <a href="/details/<%= question._id; %>"
+                   class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1"><%= question.question %></h5>
+                        <h6>#<%= question.tag %></h6>
+                        <small><%= question.createdAt %></small>
+                    </div>
+                </a>
             </div>
-            <button id="Submit"><img src="../public/images/submit.png" class="img-thumbnail img"></button>
+            <center>
+                <form action="/details/answer" method="post">
+                    <div class="form-group">
+                        <input type="hidden" name="questionId" value="<%= question._id; %>">
+                        <label for="Qbox">Enter Your Answer:</label>
+                        <textarea id="Qbox" rows="3" cols="41" name="answer"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </center>
+
         </div>
+        <div class="col-md-3"></div>
     </div>
 </div>
 </body>
