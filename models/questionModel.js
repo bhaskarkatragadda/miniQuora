@@ -8,6 +8,7 @@ const userSchema = mongoose.Schema({
    totalAnswers :{
         type:Number
    },
+
     answer:{
         type:String
     }

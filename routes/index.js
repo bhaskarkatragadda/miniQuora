@@ -4,7 +4,10 @@ const User  =  require('../models/userModel');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('login', { title: 'miniQuora' });
+    if(req.cookies._vt){
+        return res.redirect('home');
+    }
+    res.render('login', { title: 'miniQuora' });
 });
 
 router.post('/', async function (req, res, next) {
@@ -16,18 +19,8 @@ router.post('/', async function (req, res, next) {
             let userId = result._id;
             res.cookie('_vt', userId, {maxAge: 360000 + Date.now(),  httpOnly: true});
             res.redirect('home');
-            // set one session in the browser
-            // render home page
-
-
-
-            // res.status(200).json({
-            //     message: 'Login Successful'
-            // })
         }else{
-            res.status(404).json({
-                message:'Login failed'
-            })
+            res.render('login', { title: 'miniQuora', errorMessage:'Login failed' });
         }
     }
     catch (e) {
