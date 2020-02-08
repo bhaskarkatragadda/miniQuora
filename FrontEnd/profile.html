@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+body
+{
+
+}
+.box
+{
+	background-color: maroon;
+	height: 60px;
+	width: 100%;
+	top:100px;
+}
+nav
+{
+
+	padding-top: 5px;
+}		
+#SearchBar
+{
+	position: absolute;
+	height: 50px;
+	width: 300px;
+	right: 42%;
+	text-align: center;
+
+}
+.home
+{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	right: 90%;
+	border-radius: 20px;
+	text-align: center;
+	background-color: maroon;
+}
+.Logout
+{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	right: 10%;
+	border-radius: 20px;
+	text-align: center;
+	background-color: maroon;
+}
+
+#Search
+{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	right: 38%;
+	border-radius: 10px;
+	text-align: center;
+	background-color:maroon;
+	color: white;
+	transition: background-color 0.1s, color 0.1s
+
+}
+#Submit
+{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border-radius: 10px;
+	text-align: center;
+	background-color:maroon;
+	color: white;
+	transition: background-color 0.1s, color 0.1s
+
+}
+#SubTag
+{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	right: 10%;
+	top:70%;
+	border-radius: 10px;
+	text-align: center;
+	background-color:maroon;
+	color: white;
+	transition: background-color 0.1s, color 0.1s
+
+}
+#Search:hover
+{
+	background-color:maroon;
+	color:white;
+	cursor: pointer;
+}
+.container
+{
+	position: absolute;
+	top: 12%;
+	/*background-color: cyan;*/
+	height: 680px;
+	width: 100%;
+	opacity: 1;
+}
+.col-md-3
+{
+	/*background-color: maroon;*/
+}
+#badge
+{
+	text-align: center;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/nivo-slider.css">
+<link rel="stylesheet" type="text/css" href="themes/default/default.css">
+
+</head>
+<body>
+<div class="box">	
+<nav>
+<div class="home"><a href="homepage.html"><img src="home.png" class="img-thumbnail img"></a></div>
+<input type="text" id="SearchBar" placeholder="Enter To Search">
+<button id="Search"><img src="search.png" class="img-thumbnail img"></button>
+<div class="Logout"><a href="Login1.html"><img src="logout.png" class="img-thumbnail img"></a></div>
+</nav>
+</div>
+<div class="container">
+	<br>
+	<!-- <div class="row">
+		<div class="col-md-12">
+			<h3>Welcome "Username"</h3>
+			<br>
+		</div>
+	</div>
+		<br>
+		<div class="row">
+		<div class="col-md-4">
+			<h3>Total Number of Questions Asked:</h3>
+		</div>
+		<div class="col-md-4">
+			<h3>Total Number of Questions Answered:</h3>
+		</div>
+		<div class="col-md-4">
+			<h3 id="badge">Badge</h3><img src="badge1.png" class="img-thumbnail">
+			<img src="badge2.png" class="img-thumbnail">
+			<img src="badge3.png" class="img-thumbnail">
+			<img src="badge4.png" class="img-thumbnail">
+		</div>
+	</div> -->
+	<!-- <br> -->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="badge2.png" class="img-thumbnail" width="48">
+				</div>
+				<div class="col-md-8 ">
+					<div style="font-size: 24px; font-weight: 600; text-align: left; margin-left: -58px; margin-top: 8px;">Welcome Name</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 20px;">
+				<div class="col-md-6">
+					<center>Question Asked<br><span>6</span></center>
+				</div>
+				<div class="col-md-6">
+					<center>Question Answered<br><span>12</span></center>
+				</div>
+			</div>
+			<div>
+				<h3>Questions Answered</h3>
+				<br>
+				<div class="list-group">
+	  				<a href="#" class="list-group-item list-group-item-action">1</a>
+	  				<a href="#" class="list-group-item list-group-item-action">2</a>
+	 				 <a href="#" class="list-group-item list-group-item-action">3</a>
+	  				<a href="#" class="list-group-item list-group-item-action">4</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-md-6">
+			<H2>Questions Asked:</H2>
+			<div class="list-group">
+ 				 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    			<div class="d-flex w-100 justify-content-between">
+      			<h5 class="mb-1">List group item heading</h5>
+      			<small>3 days ago</small>
+    			</div>
+    			<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    		<small>Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div>
+		</div>
+		<div class="col-md-3">
+			<h3>Recently Visited:</h3>
+			<br>
+			<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">1</a>
+  <a href="#" class="list-group-item list-group-item-action">2</a>
+  <a href="#" class="list-group-item list-group-item-action">3</a>
+  <a href="#" class="list-group-item list-group-item-action">4</a>
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
