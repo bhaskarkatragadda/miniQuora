@@ -136,10 +136,10 @@
         <div class="col-md-3">
             <br>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">1</a>
-                <a href="#" class="list-group-item list-group-item-action">2</a>
-                <a href="#" class="list-group-item list-group-item-action">3</a>
-                <a href="#" class="list-group-item list-group-item-action">4</a>
+                <% for(let i in questions){ %>
+                    <a href="/details/<%= questions[i]._id; %>" class="list-group-item list-group-item-action">#<%= questions[i].tag %></a>
+                <%}%>
+
             </div>
         </div>
         <div class="col-md-6">
@@ -158,22 +158,25 @@
             <% } %>
 
         </div>
-        <div class="col-md-3">
-            <label for="Qbox">Enter Your Question:</label>
-            <textarea id="Qbox" rows="3" cols="41"></textarea>
-            <br>
-            <br>
-            <div class="form-group">
-                <label for="sel1">Select Tags:</label>
-                <select class="form-control" id="sel1" name="tag">
-                    <option value="stackoverflow">stackoverflow</option>
-                    <option value="google">google</option>
-                    <option value="shopay">shopay</option>
-                    <option value="bangalore">bangalore</option>
-                </select>
+        <form action="/home/createQuestion/" method="post">
+            <div class="col-md-3">
+                <label for="Qbox">Enter Your Question:</label>
+                <textarea id="Qbox" rows="3" cols="41" name="question"></textarea>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="sel1">Select Tags:</label>
+                    <select class="form-control" id="sel1" name="tag">
+                        <option value="stackoverflow">stackoverflow</option>
+                        <option value="google">google</option>
+                        <option value="shopay">shopay</option>
+                        <option value="bangalore">bangalore</option>
+                    </select>
+                </div>
+                <button id="Submit"><img src="../public/images/submit.png" class="img-thumbnail img"></button>
             </div>
-            <button id="Submit"><img src="../public/images/submit.png" class="img-thumbnail img"></button>
-        </div>
+        </form>
+
     </div>
 </div>
 </body>

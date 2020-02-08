@@ -26,9 +26,7 @@ router.post('/createQuestion', async function (req, res, next) {
             userId: userId
         });
         await questions.save();
-        res.status(200).json({
-            message: 'Question Uploaded'
-        });
+        res.redirect('/home')
     } catch (e) {
         res.status(500).json({
             message: 'Error in Uploading in the Question'
